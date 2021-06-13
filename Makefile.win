@@ -1,0 +1,40 @@
+# Project: AutoCraft
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = AutoCraft.o render.o item.o json/cJSON.o json/CJsonObject.o
+LINKOBJ  = AutoCraft.o render.o item.o json/cJSON.o json/CJsonObject.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = AutoCraft.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+AutoCraft.o: AutoCraft.cpp
+	$(CPP) -c AutoCraft.cpp -o AutoCraft.o $(CXXFLAGS)
+
+render.o: render.cpp
+	$(CPP) -c render.cpp -o render.o $(CXXFLAGS)
+
+item.o: item.cpp
+	$(CPP) -c item.cpp -o item.o $(CXXFLAGS)
+
+json/cJSON.o: json/cJSON.c
+	$(CPP) -c json/cJSON.c -o json/cJSON.o $(CXXFLAGS)
+
+json/CJsonObject.o: json/CJsonObject.cpp
+	$(CPP) -c json/CJsonObject.cpp -o json/CJsonObject.o $(CXXFLAGS)
