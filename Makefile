@@ -1,4 +1,4 @@
-OBJ := gmobj/item.o AutoCraft.o render/render.o json/cJSON.c.o json/CJsonObject.o util/file_util.o util/generic_util.o data/language.o
+OBJ := gmobj/item.o AutoCraft.o render/render.o json/cJSON.c.o json/CJsonObject.o util/file_util.o util/generic_util.o data/language/language.o
 LD := ld
 LD_FLAGS_RELEASE := -s
 LD_FLAGS_DEBUG :=
