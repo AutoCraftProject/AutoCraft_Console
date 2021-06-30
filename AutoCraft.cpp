@@ -1,12 +1,12 @@
-#include "head.h"
+#include "./util/head.h"
 
-#include "render.h"
-#include "item.h"
+#include "./render/render.h"
+#include "./gmobj/item.h"
 
 int main() {
-	Renderer renderer;
+	Render::Renderer renderer;
 	while (true) {
-		renderer.doRender(cout);
+		renderer.doRender(std::cout);
 		Sleep(100);
 	}
 }

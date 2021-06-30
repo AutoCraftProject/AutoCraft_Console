@@ -3,9 +3,7 @@
 
 #include <bits/stdc++.h>
 #include <windows.h>
-#include "./json/CJsonObject.hpp"
-using namespace std;
-using namespace neb;
+#include "../json/CJsonObject.hpp"
 
 #undef interface
 #define interface struct
