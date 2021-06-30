@@ -2,14 +2,14 @@
 
 Item::Properties::Properties(string name, string id, int maxStack) {
 	this->name = name;
-	this->id = id; 
-	this->maxStack = maxStack; 
+	this->id = id;
+	this->maxStack = maxStack;
 }
 
 Item::Properties::Builder::Builder() {
 	_name = "";
 	_id = "";
-	_maxStack = 99; 
+	_maxStack = 99;
 }
 
 Item::Properties::Builder& Item::Properties::Builder::name(string name) {
@@ -19,7 +19,7 @@ Item::Properties::Builder& Item::Properties::Builder::name(string name) {
 
 Item::Properties::Builder& Item::Properties::Builder::maxStack(int stack) {
 	_maxStack = stack;
-	return *this; 
+	return *this;
 }
 
 Item::Properties Item::Properties::Builder::build() {
