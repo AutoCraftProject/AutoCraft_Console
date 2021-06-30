@@ -45,7 +45,7 @@ namespace Util {
         }
     };
     inline std::string RL2Path(RL loc) {
-        return (std::string)"./"+loc.type+"/"+loc.id+"/"+loc.location;
+        return (std::string)"./resource/"+loc.type+"/"+loc.id+"/"+loc.location;
     }
 }
 
